@@ -39,7 +39,10 @@ namespace ProductApps
                 totalChargeTextBox.Text = Convert.ToString(cProduct.TotalPayment + 25);
 
                 wrapChargeTextBox.Text = Convert.ToString(cProduct.TotalPayment + 25 + 5);
+
+                gstChargeTextBox.Text = Convert.ToString((cProduct.TotalPayment + 25 + 5) * 1.1M);
             }
+
             catch (FormatException)
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
@@ -56,6 +59,7 @@ namespace ProductApps
             totalPaymentTextBlock.Text = "";
             totalChargeTextBox.Text = "";
             wrapChargeTextBox.Text = "";
+            gstChargeTextBox.Text = "";
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
